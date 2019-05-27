@@ -1,0 +1,29 @@
+// .wrapper {width: 500px; height: 300px; color:#333;}
+// .wrapper.big {width: 800px; height: 300px; color:#333;}
+// .wrapper.tall {width: 500px; height: 900px; color:#666;}
+// .wrapper a {font-family:’Arial’; color:red; font-size:15px;}
+// .wrapper.big a {color:red; font-size:24px; font-family:’Arial’;}
+// .wrapper.tall a {color:green; font-size:15px; font-family:’Arial’;}
+// .wrapper a.active {font-family:’Arial’; font-weight:bold; color:red;}
+// .wrapper.big a.active {font-family:’Arial’;}
+// .wrapper.tall a.active {color:green; font-size:24px;}
+
+$color_1: #333;
+$color_2: #666;
+$color_3: red;
+$color_4: green;
+.wrapper {
+  width: 500px; height: 300px; color:$color_1;
+  .big {width: 800px; height: 300px; color:$color_1;
+    a {color:$color_3; font-size:24px; font-family:’Arial’;
+    &.active {font-family:’Arial’;}
+  }
+  }
+  a {font-family:’Arial’; color:$color_3; font-size:15px;
+  &.active {font-family:’Arial’; font-weight:bold; color:$color_3;}
+  }
+  &.tall {width: 500px; height: 900px; color:$color_2;
+    a {color:$color_4; font-size:15px; font-family:’Arial’;
+    &.active {color:$color_4; font-size:24px;}}
+  }
+}
